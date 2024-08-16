@@ -3,8 +3,10 @@
 #include <Windows.h>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-extern int APIENTRY IsModuleLoaded(char*);
 
+EXTERN_C_START
+extern int APIENTRY IsModuleLoaded(char*);
+EXTERN_C_END
 
 BEGIN_TEST_MODULE_ATTRIBUTE()
 TEST_MODULE_ATTRIBUTE(L"Date", L"2014/6/21")
