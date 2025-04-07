@@ -11,7 +11,7 @@
 BOOL WINAPI EnumProcs(char* procname);
 
 
-int APIENTRY IsModuleLoaded(char* lpModule)
+EXTERN_C __declspec(dllexport) int APIENTRY IsModuleLoaded(char* lpModule)
 {
 	char procName[MAX_PATH] = { 0 };
 	strcpy_s(procName, lpModule);
